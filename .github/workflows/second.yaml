@@ -1,1 +1,15 @@
+name: this is for docker
+on:
+   push:
+jobs:
+   first:
+      name: this for docker
+      runs-on: ubuntu-latest
+      steps:
+        - name: we pull alpine image
+          run: docker pull alpine
+        - name: we are verify it is pull or not
+          run: docker images
+        - name: we are inspect the image
+          run: docker inspect alpine
 
