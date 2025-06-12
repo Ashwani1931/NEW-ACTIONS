@@ -10,5 +10,5 @@ jobs:
            uses: actions@v4
          - name: list the files
            run: ls
-         - name: show the content inside indx.html
+         - name: show the content inside file
            run: cat index.html
