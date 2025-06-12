@@ -1,1 +1,14 @@
-
+name: first github action
+on:
+   push:
+jobs:
+  first:
+       name: first job
+       runs-on: ubuntu:latest
+       steps:
+         - name: We are using checkout actions
+           uses: actions@v4
+         - name: list the files
+           run: ls
+         - name: show the content inside indx.html
+           run: cat index.html
