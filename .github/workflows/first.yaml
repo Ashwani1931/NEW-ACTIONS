@@ -7,7 +7,7 @@ jobs:
        runs-on: ubuntu:latest
        steps:
          - name: We are using checkout actions
-           uses: actions@v4
+           uses: actions checkout@v4
          - name: list the files
            run: ls
          - name: show the content inside file
