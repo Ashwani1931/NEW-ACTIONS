@@ -9,8 +9,8 @@ jobs:
         - name: pull the image of nginx
           run: docker pull nginx
         - name: crate a container of nginx
-          run: docker run -itd --name nginx  nginx
+          run: docker run -itd --name nginx  -p 8080:80 nginx
         - name: verify docker container
           run: docker ps 
         - name: verify using curl
-          run: curl localhost:80
+          run: curl http://localhost:8080

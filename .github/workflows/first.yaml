@@ -1,6 +1,7 @@
 name: first github action
 on:
    push:
+   workflow_dispatch:     
 jobs:
   first:
        name: first job
