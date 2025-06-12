@@ -1,0 +1,15 @@
+name: MULTICMDS
+on:
+   workflow_dispatch:
+jobs:
+  Create:
+     name: cowsay
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout
+         uses: actions/checkout@v4
+       - name: running multiple cmds
+         run: |
+               echo "This is me"
+               ls -la
+               cat index.html
