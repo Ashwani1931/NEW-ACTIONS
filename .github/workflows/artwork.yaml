@@ -1,1 +1,18 @@
-
+name: Artwork
+on:
+   push:
+   workflow_dispatch:
+jobs:
+  first:
+     name: Multi cmds
+     runs-on: ubuntu-latest
+     steps:
+       - name: Installation
+         run: sudo apt install cowsay -y
+       - name: run cmds
+         run: cowsay -f dragon "run on the safe place dragon" >> dragon.txt
+       - name: read file
+         run: |
+               cat dragon.txt
+               ls -la
+               grep -i safe dragon.txt
